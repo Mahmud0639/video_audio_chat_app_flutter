@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46175816875",
+    "project_id": "flutter-video-audio-chat-fd845",
+    "storage_bucket": "flutter-video-audio-chat-fd845.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46175816875:android:671a76e7733f6b32453bee",
+        "android_client_info": {
+          "package_name": "com.manuni.video_audio_chat_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2KscoTbFZjXt2F3T8gHY4XtcL5eucNVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
