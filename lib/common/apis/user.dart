@@ -6,6 +6,7 @@ class UserAPI {
   static Future<UserLoginResponseEntity> Login({
     LoginRequestEntity? params,
   }) async {
+    //with the help of the post method we are trying to save our user info to the database
     var response = await HttpUtil().post(
       'api/login',
       queryParameters: params?.toJson(),

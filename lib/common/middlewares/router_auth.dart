@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 import '../routes/names.dart';
 import '../store/user.dart';
 
-/// 检查是否登录
+
 class RouteAuthMiddleware extends GetMiddleware {
-  // priority 数字小优先级高
+  // priority
   @override
   int? priority = 0;
 
@@ -24,4 +24,5 @@ class RouteAuthMiddleware extends GetMiddleware {
       return RouteSettings(name: AppRoutes.SIGN_IN);
     }
   }
+
 }

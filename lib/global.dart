@@ -11,7 +11,7 @@ class Global{
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform
     );
-    await Get.putAsync<StorageService>(() => StorageService().init());//"Get.putAsync" is used when a method returns a Future type that is awaiting(need to wait a uncertain amount of time)
+    await Get.putAsync<StorageService>(() => StorageService().init());//"Get.putAsync" is used when a method returns a Future type that is awaiting(need to wait an uncertain amount of time)
     Get.put<UserStore>(UserStore());//"Get.put" used to be always ready to use like controller and other things that is needed to be booted up the app, it is always in the memory not removed after any routing
     //"Get.lazyPut" is used only when it is called not for always like the "Get.put" that is the main differences
    await Firebase.initializeApp(
