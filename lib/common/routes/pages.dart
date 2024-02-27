@@ -9,6 +9,7 @@ import '../../pages/frame/sign_in/index.dart';
 import '../../pages/message/index.dart';
 import '../../pages/profile/index.dart';
 import '../../pages/contact/index.dart';
+import '../../pages/message/chat/index.dart';
 
 import '../middlewares/router_auth.dart';
 import 'routes.dart';
@@ -45,7 +46,7 @@ class AppPages {
     GetPage(name: AppRoutes.Phone, page: () => PhonePage(), binding: PhoneBinding()),
     GetPage(name: AppRoutes.SendCode, page: () => SendCodePage(), binding: SendCodeBinding()),
   */
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
+    GetPage(name: AppRoutes.Contact, page: () => const ContactPage(), binding: ContactBinding()),
 
     GetPage(name: AppRoutes.Message, page: () => const MessagePage(), binding: MessageBinding(),middlewares: [
        RouteAuthMiddleware(priority: 1),
@@ -53,10 +54,10 @@ class AppPages {
 
     //at first when the ProfilePage is hit then first time ProfileBinding is loaded after successfully loaded the Binding then only go to the ProfilePage
     GetPage(name: AppRoutes.Profile, page: () => const ProfilePage(), binding: ProfileBinding()),
-  /*
-    //聊天详情
-    GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
+    //聊天详情
+    GetPage(name: AppRoutes.Chat, page: () => const ChatPage(), binding: ChatBinding()),
+/*
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
     GetPage(name: AppRoutes.VoiceCall, page: () => VoiceCallViewPage(), binding: VoiceCallViewBinding()),
     GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),*/

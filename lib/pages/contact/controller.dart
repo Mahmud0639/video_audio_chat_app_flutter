@@ -73,13 +73,33 @@ class ContactController extends GetxController {
         //accept json data
           fromFirestore: Msg.fromFirestore, toFirestore: (Msg msg, options)=>msg.toFirestore()).add(msgData);
 
-      Get.offAllNamed("/chat",parameters: {
+      //Get.offAllNamed() will removed all the pages from the stack
+      Get.toNamed("/chat",parameters: {
         "doc_id":doc_id.id,
         "to_token":contactItem.token??"",
         "to_name": contactItem.name??"",
         "to_avatar": contactItem.avatar??"",
         "to_online": contactItem.online.toString()
       });
+    }else{
+      if(from_messages.docs.first.id.isNotEmpty){
+        Get.toNamed("/chat",parameters: {
+        "doc_id":from_messages.docs.first.id,
+        "to_token":contactItem.token??"",
+        "to_name": contactItem.name??"",
+        "to_avatar": contactItem.avatar??"",
+        "to_online": contactItem.online.toString()
+        });
+      }
+      if(to_message.docs.first.id.isNotEmpty){
+        Get.toNamed("/chat",parameters: {
+          "doc_id":to_message.docs.first.id,
+          "to_token":contactItem.token??"",
+          "to_name": contactItem.name??"",
+          "to_avatar": contactItem.avatar??"",
+          "to_online": contactItem.online.toString()
+        });
+      }
     }
 
   }
