@@ -216,7 +216,9 @@ class ChatPage extends GetView<ChatController> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      controller.audioCall();
+                    },
                     child: Container(
                       width: 40.w,
                       height: 40.h,

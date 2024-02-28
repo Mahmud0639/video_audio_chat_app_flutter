@@ -10,6 +10,7 @@ import '../../pages/message/index.dart';
 import '../../pages/profile/index.dart';
 import '../../pages/contact/index.dart';
 import '../../pages/message/chat/index.dart';
+import '../../pages/message/voice_call/index.dart';
 
 import '../middlewares/router_auth.dart';
 import 'routes.dart';
@@ -59,8 +60,11 @@ class AppPages {
     GetPage(name: AppRoutes.Chat, page: () => const ChatPage(), binding: ChatBinding()),
 /*
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
-    GetPage(name: AppRoutes.VoiceCall, page: () => VoiceCallViewPage(), binding: VoiceCallViewBinding()),
-    GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),*/
+
+ */
+    GetPage(name: AppRoutes.VoiceCall, page: () => const VoiceCallViewPage(), binding: VoiceCallViewBinding()),
+
+    //GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),
   ];
 
 

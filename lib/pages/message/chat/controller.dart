@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:video_audio_chat_flutter/common/routes/names.dart';
 import 'package:video_audio_chat_flutter/pages/message/chat/state.dart';
 
 class ChatController extends GetxController{
@@ -11,6 +12,20 @@ class ChatController extends GetxController{
     //if more_status value has 'true' as by default then put 'true' or not then 'false'
     state.more_status.value = state.more_status.value?false:true;
   }
+
+  //audio call method
+  void audioCall(){
+    //when we would click on the call button from the menu list then
+    //we need close all the menu items immediately
+    state.more_status.value = false;
+    Get.toNamed(AppRoutes.VoiceCall,parameters: {
+      "to_name": state.to_name.value,
+      "to_avatar":state.to_avatar.value,
+      //anchor means host who will make the call
+      "call_role":"anchor"
+    });
+  }
+
 
   @override
   void onInit() {

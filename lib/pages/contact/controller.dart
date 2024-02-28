@@ -82,7 +82,7 @@ class ContactController extends GetxController {
         "to_online": contactItem.online.toString()
       });
     }else{
-      if(from_messages.docs.first.id.isNotEmpty){
+      /*if(from_messages.docs.first.id.isNotEmpty){
         Get.toNamed("/chat",parameters: {
         "doc_id":from_messages.docs.first.id,
         "to_token":contactItem.token??"",
@@ -90,8 +90,29 @@ class ContactController extends GetxController {
         "to_avatar": contactItem.avatar??"",
         "to_online": contactItem.online.toString()
         });
+      }*/
+
+      //updated
+      if(from_messages.docs.isNotEmpty){
+        Get.toNamed("/chat",parameters: {
+          "doc_id":from_messages.docs.first.id,
+          "to_token":contactItem.token??"",
+          "to_name": contactItem.name??"",
+          "to_avatar": contactItem.avatar??"",
+          "to_online": contactItem.online.toString()
+        });
       }
-      if(to_message.docs.first.id.isNotEmpty){
+      /*if(to_message.docs.first.id.isNotEmpty){
+        Get.toNamed("/chat",parameters: {
+          "doc_id":to_message.docs.first.id,
+          "to_token":contactItem.token??"",
+          "to_name": contactItem.name??"",
+          "to_avatar": contactItem.avatar??"",
+          "to_online": contactItem.online.toString()
+        });
+      }*/
+      //updated
+      if(to_message.docs.isNotEmpty){
         Get.toNamed("/chat",parameters: {
           "doc_id":to_message.docs.first.id,
           "to_token":contactItem.token??"",

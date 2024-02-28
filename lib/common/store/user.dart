@@ -16,6 +16,7 @@ class UserStore extends GetxController {
   // This means _isLogin cannot be reassigned to a new instance, but its internal value can change.
   final _isLogin = false.obs;
   // token
+  //this is our access_token actually we need to send it with header for Authorization
   String token = '';
   // profile
   final _profile = UserItem().obs;//obs means observable
