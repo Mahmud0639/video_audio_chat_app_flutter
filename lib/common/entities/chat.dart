@@ -18,7 +18,7 @@ class CallRequestEntity {
   String? to_avatar;
   String? doc_id;
 
-  CallRequestEntity({
+    CallRequestEntity({
     this.call_type,
     this.to_token,
     this.to_name,

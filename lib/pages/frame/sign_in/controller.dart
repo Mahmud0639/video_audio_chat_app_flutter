@@ -29,24 +29,25 @@ class SignInController extends GetxController {
       if (type == 'phone number') {
           if (kDebugMode) {
             print('...you are continuing with phone number...');
-          }else if(type=='google'){
-           var user = await _googleSignIn.signIn();
-           String? displayName = user!.displayName;
-           String email = user.email;
-           String id = user.id;
-           String photoUrl = user.photoUrl??"assets/icons/google.png";
-
-           LoginRequestEntity loginRequestEntity = LoginRequestEntity();
-           loginRequestEntity.avatar = photoUrl;
-           loginRequestEntity.email = email;
-           loginRequestEntity.name = displayName;
-           loginRequestEntity.open_id = id;
-           loginRequestEntity.type = 2;
-
-           asyncPostAllData(loginRequestEntity);
-
-           print('google data saved!');
           }
+      }else if(type=='google'){
+        var user = await _googleSignIn.signIn();
+        String? displayName = user!.displayName;
+        String email = user.email;
+        String id = user.id;
+        String photoUrl = user.photoUrl??"assets/icons/google.png";
+
+        LoginRequestEntity loginRequestEntity = LoginRequestEntity();
+        loginRequestEntity.avatar = photoUrl;
+        loginRequestEntity.email = email;
+        loginRequestEntity.name = displayName;
+        //id is google uid
+        loginRequestEntity.open_id = id;
+        loginRequestEntity.type = 2;
+
+        asyncPostAllData(loginRequestEntity);
+
+        print('google data saved!');
       }
     }catch(e){
       if (kDebugMode) {
