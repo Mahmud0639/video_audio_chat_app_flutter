@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:video_audio_chat_flutter/common/entities/entities.dart';
 
 class ChatState{
+  //for holding our data from firebase
   RxList<Msgcontent> msgContentList = <Msgcontent>[].obs;
 
   var to_token = "".obs;

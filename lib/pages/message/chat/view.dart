@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:video_audio_chat_flutter/common/values/colors.dart';
 import 'package:video_audio_chat_flutter/pages/message/chat/controller.dart';
+import 'package:video_audio_chat_flutter/pages/message/chat/widgets/chat_list.dart';
 
 class ChatPage extends GetView<ChatController> {
   const ChatPage({super.key});
@@ -78,6 +79,7 @@ class ChatPage extends GetView<ChatController> {
       body: Obx(() =>  SafeArea(
         child: Stack(
           children: [
+            ChatList(),
             Positioned(
                 bottom: 0.w,
                 child: Container(
